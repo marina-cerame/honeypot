@@ -13,12 +13,12 @@ The user interface is a pet-care game that triggers ACH transfers between a user
 
 ## Tech Stack
 
-![image currently down](https://github.com/TheBearQuarium/honeypot/blob/master/images/TechStack.png?raw=true 'tech stack')
+![image currently down](https://github.com/TheBearQuarium/honeypot/blob/master/images/TechStack.png?raw=true 'Angular 2, Ionic 2, Node js, Nodal, PostgreSQL, Plaid, Stripe, Amazon Web Services, Passport, Apache Cordova')
 
 ## Technical investigations done / to do
 
 **Animation** -
-Ultimately we would like to implement simple but engaging and dynamic animations for users’ pets to react to user interaction. At this time, we need to investigate what library will best fit our needs.
+Ultimately we would like to implement simple but engaging and dynamic animations for pets to react to user interaction. At this time, we need to investigate what library will best fit our needs.
 
 **Bank Connections** -
 Before choosing this project idea, we spent a considerable amount of time researching banking API options. Since we want to facilitate ACH transactions between a user’s accounts, we need a service that would both authenticate bank accounts and handle the actual transfer. We found that this was difficult to find as a single service and ultimately chose a combination of Plaid for authentication and Stripe for performing transactions.
