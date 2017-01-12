@@ -1,9 +1,11 @@
 # Tech Spec: honeypot
-Honeypot is a native, cross-platform application that makes saving money fun. Through in-game microtransactions, users deposit money into their savings account by purchasing supplies for their virtual pet.
+Honeypot is a native, cross-platform application that helps users manage personal finance in an easy and fun way by linking game-play to monetary savings. Through in-game microtransactions, users deposit money into their savings account by purchasing supplies for their virtual pet.
 
 The user interface is a pet-care game that triggers ACH transfers between a user’s checking and savings accounts. The happier your pet, the bigger your savings.
 
 ## Mockups
+
+![alt text](https://files.slack.com/files-tmb/T02P3HQD6-F3RJB2YQP-d96ca056b7/honeypot2_720.png)
 
 ## Architecture
 
