@@ -5,11 +5,13 @@ The user interface is a pet-care game that triggers ACH transfers between a user
 
 ## Mockups
 
-![](https://drive.google.com/open?id=0B_h6fQssNp3Ib2lFc3ozMWZ1dW8 'honeypot mockup')
+![](https://github.com/TheBearQuarium/honeypot/blob/master/images/honeypot2.png?raw=true 'honeypot mockup')
 
 ## Architecture
 
 ## Tech Stack
+
+![](https://github.com/TheBearQuarium/honeypot/blob/master/images/TechStack.png?raw=true 'tech stack')
 
 ## Technical investigations done / to do
 
