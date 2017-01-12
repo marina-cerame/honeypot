@@ -20,7 +20,7 @@ Authentication – Users will log into honeypot using Passport authentication to
 
 ## Ownership
 
-Server 	  Marina
-Database 	Brendan
-Bank API 	Connor
-Client	 	Chris & Grace
+Server - @marina-cerame
+Database - @gonewayword
+Bank API - @southcapital
+Client - @cdakin1 & @gracehalbert
