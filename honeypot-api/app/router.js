@@ -1,6 +1,7 @@
 'use strict';
 
 const Nodal = require('nodal');
+
 const router = new Nodal.Router();
 
 /* Middleware */
@@ -19,7 +20,7 @@ router.middleware.use(CORSMiddleware);
 /* Renderware */
 /* executed *after* Controller-specific renderware */
 
-const GzipRenderware = Nodal.require('renderware/gzip_renderware.js')
+const GzipRenderware = Nodal.require('renderware/gzip_renderware.js');
 
 router.renderware.use(GzipRenderware);
 
