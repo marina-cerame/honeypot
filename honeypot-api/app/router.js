@@ -33,6 +33,7 @@ const IndexController = Nodal.require('app/controllers/index_controller.js');
 const V1UsersController = Nodal.require('app/controllers/v1/users_controller.js');
 const V1PetTypesController = Nodal.require('app/controllers/v1/pet_types_controller.js');
 const V1PetsController = Nodal.require('app/controllers/v1/pets_controller.js');
+const V1ItemsController = Nodal.require('app/controllers/v1/items_controller.js');
 
 /* generator: end imports */
 
@@ -43,6 +44,7 @@ router.route('/').use(IndexController);
 router.route('/v1/users/{id}').use(V1UsersController);
 router.route('/v1/pet_types/{id}').use(V1PetTypesController);
 router.route('/v1/pets/{id}').use(V1PetsController);
+router.route('/v1/items/{id}').use(V1ItemsController);
 
 /* generator: end routes */
 
