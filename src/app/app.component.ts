@@ -2,9 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
-
+import { Login } from '../pages/login/login';
+import { MyPets } from '../pages/mypets/mypets';
+import { AccountPage } from '../pages/account/account';
+import { LogoutPage } from '../pages/logout/logout';
+import { SignupPage} from '../pages/signup/signup';
+import { BankAuthPage } from '../pages/bank-auth/bank-auth';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +15,7 @@ import { Page2 } from '../pages/page2/page2';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = Login;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +24,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 }
+      { title: 'My Pets', component: MyPets },
+      { title: 'Account', component: AccountPage },
+      { title: 'Log Out', component: LogoutPage }
     ];
 
   }
