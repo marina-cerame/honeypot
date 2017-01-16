@@ -3,7 +3,7 @@
 const Nodal = require('nodal');
 const User = Nodal.require('app/models/user.js');
 
-class V1UsersController extends Nodal.Controller {
+class UsersController extends Nodal.Controller {
 
   index() {
 
@@ -59,4 +59,4 @@ class V1UsersController extends Nodal.Controller {
 
 }
 
-module.exports = V1UsersController;
+module.exports = UsersController;
