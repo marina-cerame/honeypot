@@ -30,6 +30,7 @@ const IndexController = Nodal.require('app/controllers/index_controller.js');
 /* generator: begin imports */
 
 const UsersController = Nodal.require('app/controllers/users_controller.js');
+const PetTypesController = Nodal.require('app/controllers/pet_types_controller.js');
 
 /* generator: end imports */
 
@@ -38,6 +39,7 @@ router.route('/').use(IndexController);
 /* generator: begin routes */
 
 router.route('/users/{id}').use(UsersController);
+router.route('/pet_types/{id}').use(PetTypesController);
 
 /* generator: end routes */
 
