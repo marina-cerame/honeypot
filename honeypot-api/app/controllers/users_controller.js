@@ -1,13 +1,13 @@
 'use strict';
 
 const Nodal = require('nodal');
-const Item = Nodal.require('app/models/item.js');
+const User = Nodal.require('app/models/user.js');
 
-class V1ItemsController extends Nodal.Controller {
+class UsersController extends Nodal.Controller {
 
   index() {
 
-    Item.query()
+    User.query()
       .where(this.params.query)
       .end((err, models) => {
 
@@ -19,7 +19,7 @@ class V1ItemsController extends Nodal.Controller {
 
   show() {
 
-    Item.find(this.params.route.id, (err, model) => {
+    User.find(this.params.route.id, (err, model) => {
 
       this.respond(err || model);
 
@@ -29,7 +29,7 @@ class V1ItemsController extends Nodal.Controller {
 
   create() {
 
-    Item.create(this.params.body, (err, model) => {
+    User.create(this.params.body, (err, model) => {
 
       this.respond(err || model);
 
@@ -39,7 +39,7 @@ class V1ItemsController extends Nodal.Controller {
 
   update() {
 
-    Item.update(this.params.route.id, this.params.body, (err, model) => {
+    User.update(this.params.route.id, this.params.body, (err, model) => {
 
       this.respond(err || model);
 
@@ -49,7 +49,7 @@ class V1ItemsController extends Nodal.Controller {
 
   destroy() {
 
-    Item.destroy(this.params.route.id, (err, model) => {
+    User.destroy(this.params.route.id, (err, model) => {
 
       this.respond(err || model);
 
@@ -59,4 +59,4 @@ class V1ItemsController extends Nodal.Controller {
 
 }
 
-module.exports = V1ItemsController;
+module.exports = UsersController;

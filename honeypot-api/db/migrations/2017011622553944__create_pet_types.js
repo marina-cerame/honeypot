@@ -6,7 +6,7 @@ class CreatePetTypes extends Nodal.Migration {
 
   constructor(db) {
     super(db);
-    this.id = 2017011617473210;
+    this.id = 2017011622553944;
   }
 
   up() {

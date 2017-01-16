@@ -1,6 +1,6 @@
 {
 
-  "migration_id": 2017011621170520,
+  "migration_id": 2017011623021944,
 
   "models": {
 
@@ -10,8 +10,10 @@
 
       "columns": [
         {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "pet_type_id", "type": "int", "properties": {}},
         {"name": "type", "type": "string", "properties": {}},
         {"name": "name", "type": "string", "properties": {}},
+        {"name": "image", "type": "json", "properties": {}},
         {"name": "cost", "type": "int", "properties": {}},
         {"name": "effect", "type": "int", "properties": {}},
         {"name": "created_at", "type": "datetime", "properties": {}},
@@ -26,7 +28,8 @@
 
       "columns": [
         {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
-        {"name": "name", "type": "string", "properties": {}},
+        {"name": "user_id", "type": "int", "properties": {}},
+        {"name": "pet_type_id", "type": "int", "properties": {}},
         {"name": "goal_amt", "type": "int", "properties": {}},
         {"name": "goal_name", "type": "string", "properties": {}},
         {"name": "created_at", "type": "datetime", "properties": {}},
@@ -55,6 +58,9 @@
 
       "columns": [
         {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "user_id", "type": "int", "properties": {}},
+        {"name": "pet_id", "type": "int", "properties": {}},
+        {"name": "item_id", "type": "int", "properties": {}},
         {"name": "amount", "type": "int", "properties": {}},
         {"name": "created_at", "type": "datetime", "properties": {}},
         {"name": "updated_at", "type": "datetime", "properties": {}}

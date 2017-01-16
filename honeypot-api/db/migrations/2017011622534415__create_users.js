@@ -6,7 +6,7 @@ class CreateUsers extends Nodal.Migration {
 
   constructor(db) {
     super(db);
-    this.id = 2017011318273500;
+    this.id = 2017011622534415;
   }
 
   up() {

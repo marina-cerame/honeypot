@@ -1,13 +1,13 @@
 'use strict';
 
 const Nodal = require('nodal');
-const Pet = Nodal.require('app/models/pet.js');
+const Item = Nodal.require('app/models/item.js');
 
-class V1PetsController extends Nodal.Controller {
+class ItemsController extends Nodal.Controller {
 
   index() {
 
-    Pet.query()
+    Item.query()
       .where(this.params.query)
       .end((err, models) => {
 
@@ -19,7 +19,7 @@ class V1PetsController extends Nodal.Controller {
 
   show() {
 
-    Pet.find(this.params.route.id, (err, model) => {
+    Item.find(this.params.route.id, (err, model) => {
 
       this.respond(err || model);
 
@@ -29,7 +29,7 @@ class V1PetsController extends Nodal.Controller {
 
   create() {
 
-    Pet.create(this.params.body, (err, model) => {
+    Item.create(this.params.body, (err, model) => {
 
       this.respond(err || model);
 
@@ -39,7 +39,7 @@ class V1PetsController extends Nodal.Controller {
 
   update() {
 
-    Pet.update(this.params.route.id, this.params.body, (err, model) => {
+    Item.update(this.params.route.id, this.params.body, (err, model) => {
 
       this.respond(err || model);
 
@@ -49,7 +49,7 @@ class V1PetsController extends Nodal.Controller {
 
   destroy() {
 
-    Pet.destroy(this.params.route.id, (err, model) => {
+    Item.destroy(this.params.route.id, (err, model) => {
 
       this.respond(err || model);
 
@@ -59,4 +59,4 @@ class V1PetsController extends Nodal.Controller {
 
 }
 
-module.exports = V1PetsController;
+module.exports = ItemsController;

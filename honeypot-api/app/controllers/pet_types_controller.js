@@ -1,13 +1,13 @@
 'use strict';
 
 const Nodal = require('nodal');
-const User = Nodal.require('app/models/user.js');
+const PetType = Nodal.require('app/models/pet_type.js');
 
-class V1UsersController extends Nodal.Controller {
+class PetTypesController extends Nodal.Controller {
 
   index() {
 
-    User.query()
+    PetType.query()
       .where(this.params.query)
       .end((err, models) => {
 
@@ -19,7 +19,7 @@ class V1UsersController extends Nodal.Controller {
 
   show() {
 
-    User.find(this.params.route.id, (err, model) => {
+    PetType.find(this.params.route.id, (err, model) => {
 
       this.respond(err || model);
 
@@ -29,7 +29,7 @@ class V1UsersController extends Nodal.Controller {
 
   create() {
 
-    User.create(this.params.body, (err, model) => {
+    PetType.create(this.params.body, (err, model) => {
 
       this.respond(err || model);
 
@@ -39,7 +39,7 @@ class V1UsersController extends Nodal.Controller {
 
   update() {
 
-    User.update(this.params.route.id, this.params.body, (err, model) => {
+    PetType.update(this.params.route.id, this.params.body, (err, model) => {
 
       this.respond(err || model);
 
@@ -49,7 +49,7 @@ class V1UsersController extends Nodal.Controller {
 
   destroy() {
 
-    User.destroy(this.params.route.id, (err, model) => {
+    PetType.destroy(this.params.route.id, (err, model) => {
 
       this.respond(err || model);
 
@@ -59,4 +59,4 @@ class V1UsersController extends Nodal.Controller {
 
 }
 
-module.exports = V1UsersController;
+module.exports = PetTypesController;
