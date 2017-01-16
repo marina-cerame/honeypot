@@ -33,6 +33,7 @@ const UsersController = Nodal.require('app/controllers/users_controller.js');
 const PetTypesController = Nodal.require('app/controllers/pet_types_controller.js');
 const PetsController = Nodal.require('app/controllers/pets_controller.js');
 const ItemsController = Nodal.require('app/controllers/items_controller.js');
+const TransactionController = Nodal.require('app/controllers/transaction_controller.js');
 
 /* generator: end imports */
 
@@ -44,6 +45,7 @@ router.route('/users/{id}').use(UsersController);
 router.route('/pet_types/{id}').use(PetTypesController);
 router.route('/pets/{id}').use(PetsController);
 router.route('/items/{id}').use(ItemsController);
+router.route('/transaction/{id}').use(TransactionController);
 
 /* generator: end routes */
 
