@@ -3,7 +3,7 @@
 const Nodal = require('nodal');
 const PetType = Nodal.require('app/models/pet_type.js');
 
-class PetTypesController extends Nodal.Controller {
+class V1PetTypesController extends Nodal.Controller {
 
   index() {
 
@@ -59,4 +59,4 @@ class PetTypesController extends Nodal.Controller {
 
 }
 
-module.exports = PetTypesController;
+module.exports = V1PetTypesController;

@@ -3,7 +3,7 @@
 const Nodal = require('nodal');
 const Item = Nodal.require('app/models/item.js');
 
-class ItemsController extends Nodal.Controller {
+class V1ItemsController extends Nodal.Controller {
 
   index() {
 
@@ -59,4 +59,4 @@ class ItemsController extends Nodal.Controller {
 
 }
 
-module.exports = ItemsController;
+module.exports = V1ItemsController;
