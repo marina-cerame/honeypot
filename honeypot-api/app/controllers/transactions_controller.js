@@ -8,6 +8,7 @@ class TransactionsController extends Nodal.Controller {
   index() {
 
     Transaction.query()
+      .join('user')
       .where(this.params.query)
       .end((err, models) => {
 
