@@ -15,7 +15,7 @@ const Nodal = require('nodal');
 const Item = Nodal.require('app/models/item.js');
 const PetType = Nodal.require('app/models/pet_type.js');
 const Pet = Nodal.require('app/models/pet.js');
-const Transaction = Nodal.reuire('app/models/transaction.js');
+const Transaction = Nodal.require('app/models/transaction.js');
 const User = Nodal.require('app/models/user.js');
 
 Pet.joinsTo(User, {multiple: true});
