@@ -8,10 +8,11 @@ class V1ItemsController extends Nodal.Controller {
   index() {
 
     Item.query()
+      .join('petType')
       .where(this.params.query)
       .end((err, models) => {
 
-        this.respond(err || models);
+        this.respond(err || models, ['id', 'name', 'cost', {'petType': ['name']}]);
 
       });
 
