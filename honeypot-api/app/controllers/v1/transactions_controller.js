@@ -3,12 +3,11 @@
 const Nodal = require('nodal');
 const Transaction = Nodal.require('app/models/transaction.js');
 
-class TransactionsController extends Nodal.Controller {
+class V1TransactionsController extends Nodal.Controller {
 
   index() {
 
     Transaction.query()
-      .join('user')
       .where(this.params.query)
       .end((err, models) => {
 
@@ -60,4 +59,4 @@ class TransactionsController extends Nodal.Controller {
 
 }
 
-module.exports = TransactionsController;
+module.exports = V1TransactionsController;
