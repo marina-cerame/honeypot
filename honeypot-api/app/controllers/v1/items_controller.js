@@ -6,13 +6,12 @@ const Item = Nodal.require('app/models/item.js');
 class V1ItemsController extends Nodal.Controller {
 
   index() {
-
     Item.query()
       .join('petType')
       .where(this.params.query)
       .end((err, models) => {
 
-        this.respond(err || models, ['id', 'name', 'cost', {'petType': ['name']}]);
+        this.respond(err || models, ['id', 'name', 'cost', 'type', 'effect', 'image', {'petType': ['name']}]);
 
       });
 
