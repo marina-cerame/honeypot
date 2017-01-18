@@ -2,26 +2,24 @@
 
 const Nodal = require('nodal');
 const Pet = Nodal.require('app/models/pet.js');
+const Transaction = Nodal.require('app/models/transaction.js');
 
 class V1PetsController extends Nodal.Controller {
 
   index() {
-
     Pet.query()
+      .join('user')
       .where(this.params.query)
       .end((err, models) => {
-
-        this.respond(err || models);
+        this.respond(err || models, ['name', {'user': ['username']}]);
 
       });
 
   }
 
   show() {
-
     Pet.find(this.params.route.id, (err, model) => {
-
-      this.respond(err || model);
+      this.respond(err || { model });
 
     });
 
