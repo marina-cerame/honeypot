@@ -3,14 +3,14 @@
 const Nodal = require('nodal');
 const Transaction = Nodal.require('app/models/transaction.js');
 
-class V1GoalsController extends Nodal.Controller {
+class V1TotalsController extends Nodal.Controller {
 
   get() {
     Transaction.query()
       .where(this.params.query)
       .end((err, models) => {
         let total = 0;
-        
+
         models.forEach(model => total += model._data.amount);
 
         this.respond(err || { total });
