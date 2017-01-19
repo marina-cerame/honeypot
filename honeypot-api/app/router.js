@@ -36,6 +36,7 @@ const V1PetsController = Nodal.require('app/controllers/v1/pets_controller.js');
 const V1PetTypesController = Nodal.require('app/controllers/v1/pet_types_controller.js');
 const V1TransactionsController = Nodal.require('app/controllers/v1/transactions_controller.js');
 const V1LevelsController = Nodal.require('app/controllers/v1/levels_controller.js');
+const V1GoalsController = Nodal.require('app/controllers/v1/goals_controller.js');
 
 /* generator: end imports */
 
@@ -49,6 +50,7 @@ router.route('/v1/pets/{id}').use(V1PetsController);
 router.route('/v1/pet_types/{id}').use(V1PetTypesController);
 router.route('/v1/transactions/{id}').use(V1TransactionsController);
 router.route('/v1/levels/{id}').use(V1LevelsController);
+router.route('/v1/goals/{id}').use(V1GoalsController);
 
 /* generator: end routes */
 
