@@ -14,8 +14,8 @@ class V1LevelsController extends Nodal.Controller {
       .where(this.params.query)
       .end((err, models) => {
         // base state from creating pet
-        let happiness = 10;
-        let hunger = 10;
+        let happiness = 50;
+        let hunger = 50;
 
         // calculate previous state
         models.forEach(model => {
@@ -35,32 +35,33 @@ class V1LevelsController extends Nodal.Controller {
 
           // reduce hunger and happiness by time
           if (hh > 0) {
-            hunger -= hh;
-            happiness -= hh;
+            hunger -= hh * 2;
+            happiness -= hh * 2;
           }
-
 
           // no negative states
           if (hunger < 0) hunger = 0;
           if (happiness < 0) happiness = 0;
 
           // update state based on item bought
-          itemData.type === 'food' ? hunger += itemData.effect : happiness += itemData.effect;
-          console.log(hunger, happiness, '<<<<<<<<<<<<<<HUNGER AND HAPPINESS');
-          console.log(itemData.type);
+          itemData.type === 'food' ?
+          hunger += itemData.effect * 10 :
+          happiness += itemData.effect * 10;
+
+          // cap at 100
+          if (hunger > 100) hunger = 100;
+          if (happiness > 100) happiness = 100;
 
           prevDate = date;
         });
 
+        // run one last subtraction from current date
         let date = new Date();
         let diff = date - prevDate;
         let hh = Math.floor(diff / 1000 / 60 / 60);
-        console.log('FINAL HUNGER AND HAPPINESS AFTER SUBTRACTING ' + hh)
-
         if (hh > 0) {
-          hunger -= hh;
-          happiness -= hh;
-          console.log(hunger,happiness)
+          hunger -= hh * 2;
+          happiness -= hh * 2;
         }
         if (hunger < 0) hunger = 0;
         if (happiness < 0) happiness = 0;
